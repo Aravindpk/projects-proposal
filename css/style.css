@@ -1,0 +1,378 @@
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.body {
+    color: rgba(0, 0, 0, 0.87) !important;
+  overflow:hidden;
+}
+
+.bg{
+  background-image: url(../img/bgimage.jpg);
+width: 100%; 
+  background-size: 140%;
+  border-radius: 4px;
+}
+
+.navbar-header {
+    padding-top: 10px;
+}
+
+.navbar-brand {
+    height: 70px;
+    padding: 0;
+}
+
+.navbar-brand img {
+  padding-top: 10px;
+    height: 60px;
+}
+
+nav.navbar {
+    height: 80px;
+}
+
+@media (max-width: 768px) {
+    nav.navbar .container-fluid .navbar-brand {
+        position: absolute;
+        top: 0px;
+    }
+
+    nav.navbar .navbar-brand {
+        padding: 0;
+    }
+}
+
+nav.navbar .nav-tabs {
+    border: 0;
+}
+
+nav.navbar .nav-tabs a {
+    border: none;
+}
+
+
+@media (min-width: 768px) {
+    nav.navbar.navbar-default .nav-tabs li a:after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 2px;
+        background-color: #ff5500;
+        left: 15px;
+        bottom: 10px;
+        right: 100%;
+        transition: 0.3s ease-out right;
+    }
+
+    nav.navbar.navbar-default .nav-tabs li.active a:after {
+        right: 50%;
+    }
+
+    nav.navbar.navbar-default .nav-tabs li:nth-last-child(2) {
+        margin-right: 30px;
+    }
+}
+
+nav.navbar.navbar-default .nav-tabs li.active a {
+    position: relative;
+}
+
+nav.navbar.navbar-default .nav-tabs li.active a,
+nav.navbar.navbar-default .nav-tabs li.active:hover a {
+    background: transparent;
+    border: none;
+    color: #ff5500;
+}
+
+
+.navbar-default {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    border: 0;
+    background-color: white;
+}
+
+.brand1 {
+    position: absolute;
+    top: 0vh;
+}
+
+.navbar-nav > li> a {
+    color: rgba(0, 0, 0, 0.87);
+    transition-timing-function: ease-out;
+    transition: 0.2s;
+}
+
+.navbar-nav> li> a:hover {
+    transition-timing-function: ease-in;
+    transition: 0.2s;
+    color: #ff5500 !important;
+}
+
+.navbar-collapse ul {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-default .navbar-collapse {
+    border: none;
+}
+
+.navbar-default .navbar-collapse.in,
+.navbar-default .navbar-collapse.collapsing {
+    margin-top: 3px;
+}
+
+.navbar-default .navbar-collapse.in ul,
+.navbar-default .navbar-collapse.collapsing ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 15px;
+}
+
+.navbar-default .navbar-collapse.in li,
+.navbar-default .navbar-collapse.collapsing li {
+    float: none;
+    text-align: center;
+}
+
+.navbar-default .navbar-collapse.in li:last-child .btn,
+.navbar-default .navbar-collapse.collapsing li:last-child .btn {
+    display: inline-block;
+}
+
+.navbar-collapse.in {
+    overflow-y: visible;
+}
+
+.btn-default,
+.navbar .navbar-nav li .btn {
+    border: 1px solid #ff5500;
+    background-color: #ff5500;
+    color: white;
+    transition-timing-function: ease-out;
+    transition: 0.2s;
+    border-radius: 4px;
+}
+
+.navbar .navbar-nav li .btn {
+    color: white;
+}
+
+.navbar-header > button {
+    border: none;
+}
+
+/**
+ * Hamburger menu:
+ * Toggle styles
+ */
+
+.navbar-header button.navbar-toggle {
+    margin-top: 13px;
+}
+
+.navbar-header button.navbar-toggle span {
+    transition: all 0.3s ease-out;
+}
+
+.navbar-header button.navbar-toggle:hover span,
+.navbar-header button.navbar-toggle:active span,
+.navbar-header button.navbar-toggle:active:hover span,
+.navbar-header button.navbar-toggle:not(.collapsed) span {
+    background-color: #ff5500;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+.navbar-header button.navbar-toggle:hover,
+.navbar-header button.navbar-toggle:active,
+.navbar-header button.navbar-toggle:active:hover {
+    background: transparent;
+}
+
+.navbar-header button.navbar-toggle span:first-child {
+    animation: hb-top-bar-open 0.3s forwards ease-out;
+}
+
+.navbar-header button.navbar-toggle.collapsed span:first-child {
+    animation: hb-top-bar-closed 0.3s forwards ease-out;
+}
+
+.navbar-header button.navbar-toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-header button.navbar-toggle.collapsed span:nth-child(2) {
+    opacity: 1;
+}
+
+.navbar-header button.navbar-toggle span:last-child {
+    animation: hb-bottom-bar-open 0.3s forwards ease-out;
+}
+
+.navbar-header button.navbar-toggle.collapsed span:last-child {
+    animation: hb-bottom-bar-closed 0.3s forwards ease-out;
+}
+
+@keyframes hb-top-bar-closed {
+    0% {
+        -webkit-transform: translateY(6px) rotate(45deg);
+        -ms-transform: translateY(6px) rotate(45deg);
+        -o-transform: translateY(6px) rotate(45deg);
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    50% {
+        -webkit-transform: translateY(6px) rotate(0deg);
+        -ms-transform: translateY(6px) rotate(0deg);
+        -o-transform: translateY(6px) rotate(0deg);
+        transform: translateY(6px) rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes hb-top-bar-open {
+    0% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(6px);
+        -ms-transform: translateY(6px);
+        -o-transform: translateY(6px);
+        transform: translateY(6px);
+    }
+    100% {
+        -webkit-transform: translateY(6px) rotate(45deg);
+        -ms-transform: translateY(6px) rotate(45deg);
+        -o-transform: translateY(6px) rotate(45deg);
+        transform: translateY(6px) rotate(45deg);
+    }
+}
+
+@keyframes hb-bottom-bar-closed {
+    0% {
+        -webkit-transform: translateY(-6px) rotate(-45deg);
+        -ms-transform: translateY(-6px) rotate(-45deg);
+        -o-transform: translateY(-6px) rotate(-45deg);
+        transform: translateY(-6px) rotate(-45deg);
+    }
+
+    50% {
+        -webkit-transform: translateY(-6px) rotate(0deg);
+        -ms-transform: translateY(-6px) rotate(0deg);
+        -o-transform: translateY(-6px) rotate(0deg);
+        transform: translateY(-6px) rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes hb-bottom-bar-open {
+    0% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(-6px);
+        -ms-transform: translateY(-6px);
+        -o-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+    100% {
+        -webkit-transform: translateY(-6px) rotate(-45deg);
+        -ms-transform: translateY(-6px) rotate(-45deg);
+        -o-transform: translateY(-6px) rotate(-45deg);
+        transform: translateY(-6px) rotate(-45deg);
+    }
+}
+
+/**
+ * Hamburger menu:
+ * My gawd! Lots of keyframes there.
+ */
+
+.content {
+    padding-top: 110px;
+}
+
+@media (max-width: 1000px) {
+    .navbar-brand img:last-child {
+        display: none;
+    }
+}
+
+.event{
+  padding: 0px 15px 10.4em 30px;
+font-size: 45px;
+color: white;
+font-weight: 100;
+  border-radius: 4px;
+line-height: 42px;
+  font-family: roboto;
+  
+  
+}
+
+.panel {
+    margin-left: 2px;
+}
+
+.panel> .panel-heading {
+    background-color: white;
+    border: none;
+  padding: 10px 10px 5px 15px;
+}
+
+.panel-body {
+     
+}
+
+.clearfix {
+    
+}
+
+.navbar-right {
+    padding-top: 15px;
+}
+
+.btn {
+    padding: 8px !important;
+    font-size: 14px;
+}
+
+/*.navbar-btn {
+    margin-top: 4px !important;
+    margin-bottom: 8px;
+    margin-left: 14px !important;
+}*/
+
+.btn-default:hover,
+.btn-default:active,
+.btn-default:active:hover {
+    color: #ff5500;
+    background-color: white;
+    border: 1px solid #ff5500;
+    border-radius: 4px;
+    transition-timing-function: ease-in;
+    transition: 0.2s;
+}
